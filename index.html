@@ -14,7 +14,8 @@
 
 <header>
     <div class="conteiner">
-        <a href="./index.html" class="logo logo-nav nav__links"><span class="logo__text">Web</span>Studio</a>
+        <a href="./index.html" class="logo logo-nav"><span class="logo__text">Web</span>Studio</a>
+     <div class="menu-conteiner" id="menu-conteiner" data-menu> 
         <nav>
             <ul class="nav-list list">
                 <li>
@@ -46,7 +47,24 @@
                 </a>
             </li>
         </ul>
+
+        <ul class="mob-social list">
+            <li><a class="mob-social__links" target="_blank" href="https://www.instagram.com/" rel="noopener, nofolow, noindex">Instagram</a></li>
+            <li><a class="mob-social__links" target="_blank" href="https://twitter.com/" rel="noopener, nofolow, noindex">Twitter</a></li>
+            <li><a class="mob-social__links" target="_blank" href="https://www.facebook.com/" rel="noopener, nofolow, noindex">Facebook</a></li>
+            <li><a class="mob-social__links" target="_blank" href="https://www.linkedin.com/" rel="noopener, nofolow, noindex">LinkedIn</a></li>
+              
+        </ul>
         </div>
+        
+        <button class="mob-menu__button" type="button" aria-expanded="false" aria-controls="menu-conteiner" data-menu-button>
+            <svg class="mob-menu__icon" style="width: 40px; height: 40px;" aria-label="Переключатель мобильного меню">
+                <use class="icon-menu" href="./images/sprite.svg#icon-menu_40px"></use>
+                <use class="icon-cross" href="./images/sprite.svg#icon-close_40px"></use>
+            </svg>
+        </button>
+ 
+        
         
 </header>
 
@@ -336,6 +354,7 @@
 </div>
 
 <script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

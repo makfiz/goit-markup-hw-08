@@ -12,14 +12,17 @@
         url(../images/Img-Overlay.jpg);
 
     @include mini {
+            max-width: 480px;
             padding: 118px 0px;
         }
 
     @include mobile {
+            max-width:480px;
             padding: 118px 0px;    
             }
             
     @include tablet {
+            max-width: 768px;
              padding: 118px 0px;   
             }
         
