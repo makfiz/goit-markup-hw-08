@@ -51,13 +51,14 @@ footer {
 address {
     font-style: normal;
 
-    @include mini {
+    @media screen and (max-width:767px) {
         display: flex;
         justify-content: center;
+        text-align: center;
     }
-    @include mobile {
-        display: flex;
-        justify-content: center;
+
+    @include tablet {
+        text-align: center;
     }
 }
 

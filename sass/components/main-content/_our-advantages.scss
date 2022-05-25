@@ -23,6 +23,10 @@
         &:nth-child(odd) {
             margin-right: 30px;
         }
+
+        &:nth-child(n+3){
+            margin-top: 30px
+        }
     }
 
     @include desktop {
@@ -39,13 +43,13 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: center;
 }
 
-.Feature__list{
-    @include mini {margin-bottom: 30px;}
-    @include mobile {margin-bottom: 30px;}
-    @include tablet {margin-bottom: 30px;}
-   
+.Feature__list + .Feature__list{
+    @media screen and (max-width:767px){
+        margin-top: 30px;
+    }
 }
 
 .Feature__list>p {

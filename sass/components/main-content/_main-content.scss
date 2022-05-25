@@ -9,6 +9,10 @@ h2 {
     font-weight: 700;
     text-align: center;
     letter-spacing: 0.03em;
+
+    @media screen and (max-width:1199px) {
+        margin-bottom: 30px;
+    }
 }
 
     @include mini {

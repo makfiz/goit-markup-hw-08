@@ -206,20 +206,25 @@ nav li+li {
 }
 
 /************************Mob Nav menu ***********************/
+.nav-menu {
+    display: inline-flex;
+    align-items: center;
+    @media screen and (max-width:767px){
+        display: none;
+    }
+}
 
-.menu-conteiner {
+.mob-menu {
    @media screen  and (max-width:767px){
        display: none;
 
-       position: absolute;
-       top: calc(100% + 10px);
-      
-       left: 0;
-       width: 100%;
+       position: fixed;
+
+       top: 0px;
+       width: 100vw;
+       height: 100vh;
        
        background-color: #fff;
-       border: 2px solid var(--accent-text-color);
-       padding: 10px 40px;
        z-index:1;
 
     &.is-open {
@@ -227,36 +232,42 @@ nav li+li {
     }
        
    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+    .conteiner {
+        display: flex;
+        padding: 48px 40px;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+
 }
 
+
+
 .mob-menu__button {
-    display: none;
+    display: block;
     padding: 0px;
     margin: 0px 0px 0px auto;
     background-color: transparent;
     border: none;
 
-
-    @media screen and (max-width:767px) {
-        display: inline-flex;
-    }
-
-    .icon-cross {
-        display: none;
-    }
-
-    &.is-open .icon-cross {
-        display: block;
-    }
-
-    &.is-open .icon-menu {
-        display: none;
-    }
-
+    @media screen and (min-width: 768px) {
+            display: none;
+        }
+   
     &:hover .mob-menu__icon,
     &:focus .mob-menu__icon {
         fill: var(--accent-text-color);
     }
+}
+
+.mob-menu .mob-menu__button {
+    margin-top: -38px;
+    margin-right: -25px;
 }
 
 .mob-menu__icon {
@@ -265,11 +276,6 @@ nav li+li {
 
 .mob-social {
     display: none;
-
-    li {
-        position: relative;
-    }
-    
     
     @media screen and (max-width:767px) {
         display: inline-flex;
