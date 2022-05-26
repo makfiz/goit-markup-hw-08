@@ -320,6 +320,10 @@ nav li + li {
   overflow-y: scroll;
 }
 
+.nav-holder {
+  margin-bottom: 50px;
+}
+
 .mob-menu__button {
   display: block;
   padding: 0px;
