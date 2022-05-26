@@ -6,6 +6,11 @@ footer {
 
 .footer-parent {
 
+    @media screen and (max-width:767px){
+        display: flex;
+        flex-direction: column;
+    }
+
     @include tablet {
         display: flex;
         flex-wrap: wrap;
@@ -29,12 +34,7 @@ footer {
     letter-spacing: 0.03em;
 
 
-    @include mini {
-        display: flex;
-        justify-content: center;
-    }
-
-    @include mobile {
+    @media screen and (max-width:1199px) {
         display: flex;
         justify-content: center;
     }
